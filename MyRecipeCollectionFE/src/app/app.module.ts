@@ -12,7 +12,8 @@ export const defaultTooltipOptions: TooltipOptions = {
   'show-delay': 100,
   'tooltip-class': 'tooltip',
   placement: 'right',
-  'hide-delay': 100
+  'hide-delay': 100,
+  'display-mobile': false
 };
 
 @NgModule({
