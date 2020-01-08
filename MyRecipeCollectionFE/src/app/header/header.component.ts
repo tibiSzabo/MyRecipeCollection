@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavItem } from '../model/sidenav-item';
+import { HeaderService } from '../service/header.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-  sideNavOpen = false;
+  public sideNavOpen = false;
+  public sidenavItems: SidenavItem[] = [];
 
-  constructor() { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit() {
+    this.sidenavItems = this.headerService.getSidenavItems();
   }
 }

@@ -5,3 +5,10 @@
      tooltip="Toggle menu"></i>
   <span class="navbar-brand mb-0 h1">My Recipe Collection</span>
 </nav>
+<div class="sidenav" [ngClass]="sideNavOpen ? 'sidenav-open' : ''">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"
+        *ngFor="let sidenavItem of sidenavItems"
+        [ngClass]="sideNavOpen ? '' : 'sidenav-item-hidden'">{{ sidenavItem.name }}</li>
+  </ul>
+</div>

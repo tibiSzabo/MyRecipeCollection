@@ -7,11 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
 
 import { TooltipOptions } from 'ng2-tooltip-directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const defaultTooltipOptions: TooltipOptions = {
-  'show-delay': 100,
-  'tooltip-class': 'tooltip',
+  theme: 'light',
   placement: 'right',
+  'show-delay': 500,
+  'tooltip-class': 'tooltip',
   'hide-delay': 100,
   'display-mobile': false
 };
@@ -24,7 +26,8 @@ export const defaultTooltipOptions: TooltipOptions = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TooltipModule.forRoot(defaultTooltipOptions as TooltipOptions)
+    TooltipModule.forRoot(defaultTooltipOptions as TooltipOptions),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

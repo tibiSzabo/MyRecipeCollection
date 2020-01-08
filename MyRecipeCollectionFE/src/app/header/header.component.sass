@@ -1,8 +1,8 @@
 @import src/styles.sass
 
 .navbar
-  height: 6rem
-  box-shadow: 0px -10px 20px 0px black
+  height: 9vh
+  box-shadow: 0px -10px 17px 0px black
   justify-content: center
 
 .navbar-brand
@@ -31,6 +31,43 @@
   -webkit-transform: rotate(180deg)
   -o-transform: rotate(180deg)
   -ms-transform: rotate(180deg)
+
+.sidenav
+  display: flex
+  justify-content: center
+  width: 19rem
+  height: 0
+  top: 9vh
+  background-color: #f8f9fa
+  box-shadow: -8px -8px 17px 0px black
+  transition: 0.5s ease-in-out
+
+.sidenav-open
+  height: 91vh
+  transition: height 0.5s ease-in-out
+
+.list-group-item
+  background-color: transparent
+  overflow: hidden
+  visibility: visible
+  opacity: 1
+  transition: opacity 1s, text-shadow 0.2s
+  cursor: pointer
+  font-family: $indie_flower
+  font-size: 25px
+  user-select: none
+  &:hover
+    text-shadow: 0 0 1px black
+
+.list-group
+  width: 100%
+  align-items: center
+  padding-top: 15px
+
+.sidenav-item-hidden
+  visibility: hidden
+  opacity: 0
+  transition: 0.2s
 
 @media only screen and (max-width: 420px)
   .navbar
